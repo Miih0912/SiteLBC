@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+body {
+    background-image: url('fundo\ do\ site.png');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.main-banner {
+    width: 100%;
+    height: auto;
+    max-height: 500px; 
+    display: block;
+    object-fit: cover;
+}
+
+nav {
+    background-color: #2e7d32; 
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffb74d;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    border-left: 10px solid #e65100;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+article {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h3 {
+    color: #e65100;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+article img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.turmas-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.turmas-fotos img {
+    width: 100%;
+    margin: 0;
+}
+
+/* parte do jecep*/
+.carrossel-container {
+    position: relative;
+    max-width: 850px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 5px solid #2e7d32;
+}
+
+@keyframes carrosselslide{
+    0% { transform: translateX(0); }
+    100% {
+        transform: translateX(calc(-320px * 13));
+    }
+}
+
+.carrossel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.carrossel-slide img {
+    min-width: 100%;
+    height: 450px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(230, 81, 0, 0.85);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.prev:hover, .next:hover {
+    background: #2e7d32;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+
+/* Cusos da ep */
+.curso-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 5px solid #2e7d32;
+}
+
+.curso-item h4 {
+    display: flex;
+    align-items: center;
+    color: #2e7d32;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.curso-item h4 img {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+}
+
+/* para entrar em contato com os responsáveis pela escola */
+#contato {
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+#contato h2 {
+    color: #ffffff;
+    border-left-color: #ffb74d;
+}
+
+.contato-info p {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1b5e20;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
